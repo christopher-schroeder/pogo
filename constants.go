@@ -1,0 +1,74 @@
+package pogo
+
+const DECK_SIZE = 52
+
+const NUMBER_OF_SUITS = 4
+const NUMBER_OF_FACES = 13
+
+const SPADE = 0
+const HEART = 1
+const DIAMOND = 8
+const CLUB = 57
+
+const INDEX_SPADE = 0
+const INDEX_HEART = 1
+const INDEX_DIAMOND = 2
+const INDEX_CLUB = 3
+const NOT_A_SUIT = -1
+
+const TWO_FIVE = 0
+const THREE_FIVE = 1
+const FOUR_FIVE = 5
+const FIVE_FIVE = 22
+const SIX_FIVE = 94
+const SEVEN_FIVE = 312
+const EIGHT_FIVE = 992
+const NINE_FIVE = 2422
+const TEN_FIVE = 5624
+const JACK_FIVE = 12522
+const QUEEN_FIVE = 19998
+const KING_FIVE = 43258
+const ACE_FIVE = 79415
+
+const TWO_FLUSH = 1
+const THREE_FLUSH = TWO_FLUSH<<1
+const FOUR_FLUSH = THREE_FLUSH<<1
+const FIVE_FLUSH = FOUR_FLUSH<<1
+const SIX_FLUSH = FIVE_FLUSH<<1
+const SEVEN_FLUSH = SIX_FLUSH<<1
+const EIGHT_FLUSH = SEVEN_FLUSH<<1
+const NINE_FLUSH = EIGHT_FLUSH<<1
+const TEN_FLUSH = NINE_FLUSH<<1
+const JACK_FLUSH = TEN_FLUSH<<1
+const QUEEN_FLUSH = JACK_FLUSH<<1
+const KING_FLUSH = QUEEN_FLUSH<<1
+const ACE_FLUSH = KING_FLUSH<<1
+
+// _SEVEN tag suppressed
+const TWO = 0
+const THREE = 1
+const FOUR = 5
+const FIVE = 22
+const SIX = 98
+const SEVEN = 453
+const EIGHT = 2031
+const NINE = 8698
+const TEN = 22854
+const JACK = 83661
+const QUEEN = 262349
+const KING = 636345
+const ACE = 1479181
+// end of _SEVEN tag suppressed
+
+const MAX_FIVE_NONFLUSH_KEY_INT = ((4*ACE_FIVE)+KING_FIVE)
+const MAX_FIVE_FLUSH_KEY_INT = (ACE_FLUSH|KING_FLUSH|QUEEN_FLUSH|JACK_FLUSH|TEN_FLUSH)
+const MAX_SEVEN_FLUSH_KEY_INT = (ACE_FLUSH|KING_FLUSH|QUEEN_FLUSH|JACK_FLUSH|TEN_FLUSH|NINE_FLUSH|EIGHT_FLUSH)
+
+const RANK_OFFSET_SHIFT = 9
+const RANK_HASH_MOD = (1<<RANK_OFFSET_SHIFT) - 1
+
+const MAX_FLUSH_CHECK_SUM = 7*CLUB
+
+// Bit masks
+const FLUSH_BIT_SHIFT = 23
+const FACE_BIT_MASK = (1 << FLUSH_BIT_SHIFT) - 1
