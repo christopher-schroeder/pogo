@@ -6,6 +6,26 @@ Texas hold em poker hand evaluator in go
 ```
 go get github.com/christopher-schroeder/pogo
 ```
+# Instruction
+
+
+
+|    |   |   |   |   |
+|----|---|---|---|---|
+|  A |   |   |   |   |
+|  K |   |   |   |   |
+|  Q |   |   |   |   |
+|  J |   |   |   |   |
+|  T |   |   |   |   |
+|  9 |   |   |   |   |
+|  8 |   |   |   |   |
+|  7 |   |   |   |   |
+|  6 |   |   |   |   |
+|  5 |   |   |   |   |
+|  4 |   |   |   |   |
+|  3 |   |   |   |   |
+|  2 |   |   |   |   |
+
 
 # Example
 ```go
