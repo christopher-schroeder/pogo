@@ -8,7 +8,7 @@ go get github.com/christopher-schroeder/pogo
 ```
 # Instruction
 
-
+Each card is encoded as a single uint8 by the following scheme.
 
 |    |  ♠ |  ♥ |  ♦ |  ♣ |
 |----|----|----|----|----|
@@ -26,6 +26,7 @@ go get github.com/christopher-schroeder/pogo
 |  3 | 44 | 45 | 46 | 47 |
 |  2 | 48 | 49 | 50 | 51 |
 
+The pogo.GetRank function with seven uint8 parameters (encoded cards) caluclates a uint16 rank for a given set of seven cards. Higher poker hands get higher ranks, while equal hands tie equal ranks. The higherst possible score is 7462 (Royal Flush).
 
 # Example
 ```go
